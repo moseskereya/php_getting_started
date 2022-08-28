@@ -36,6 +36,7 @@ require "dbcon.php"
                                 $student = mysqli_fetch_array($query_run);
                         ?>
                                 <form action="code.php" method="POST">
+                                    <input type="hidded" name="student_id" value="<?= $student["id"]; ?>">
                                     <div class="mb-3">
                                         <label>Student Name</label>
                                         <input type="text" name="name" value="<?= $student["name"]; ?>" class="form-control">

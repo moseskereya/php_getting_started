@@ -50,7 +50,7 @@ require "dbcon.php"
                     if (mysqli_num_rows($query_run) > 0) {
                         foreach ($query_run as $student) {
                     ?>
-                            <tr>
+                    <tr>
                                 <td><?= $student['id']; ?></td>
                                 <td><?= $student['name']; ?></td>
                                 <td><?= $student['email']; ?></td>
@@ -60,8 +60,8 @@ require "dbcon.php"
                                     <a href="" class="btn btn-info btn-sm">View</a>
                                     <a href="student-edit.php?id=<?= $student['id'];?>" class="btn btn-success btn-sm">Edit</a>
                                     <a href="" class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
+                            </td>
+                    </tr>
                     <?php
                         }
                     } else {
